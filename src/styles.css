@@ -1,1 +1,221 @@
-/* You can add global styles to this file, and also import other style files */
+@charset "utf-8";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  button[type='submit'] {
+    font-family: inherit;
+    font-size: 16px;
+  }
+}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(
+    135deg,
+    #0c0c0c 0%,
+    #1a1a2e 15%,
+    #16213e 35%,
+    #0f3460 50%,
+    #533a7d 70%,
+    #8b5a8c 85%,
+    #a0616a 100%
+  );
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+/* Animated background elements */
+.bg-shapes {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  overflow: hidden;
+}
+.shape {
+  position: absolute;
+  background: rgba(255, 255, 255, 0.08);
+  animation: float 6s ease-in-out infinite;
+  box-shadow: 0 8px 32px rgba(255, 255, 255, 0.1);
+}
+.shape:nth-child(1) {
+  width: 120px;
+  height: 80px;
+  border-radius: 15px;
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+  transform: rotate(15deg);
+}
+.shape:nth-child(2) {
+  width: 90px;
+  height: 140px;
+  border-radius: 12px;
+  top: 60%;
+  right: 15%;
+  animation-delay: 2s;
+  transform: rotate(-20deg);
+}
+.shape:nth-child(3) {
+  width: 100px;
+  height: 60px;
+  border-radius: 10px;
+  bottom: 20%;
+  left: 20%;
+  animation-delay: 4s;
+  transform: rotate(25deg);
+}
+.shape:nth-child(4) {
+  width: 80px;
+  height: 120px;
+  border-radius: 8px;
+  top: 10%;
+  right: 30%;
+  animation-delay: 1s;
+  transform: rotate(-10deg);
+}
+.shape:nth-child(5) {
+  width: 110px;
+  height: 70px;
+  border-radius: 14px;
+  bottom: 40%;
+  right: 20%;
+  animation-delay: 3s;
+  transform: rotate(30deg);
+}
+.shape:nth-child(6) {
+  width: 95px;
+  height: 95px;
+  border-radius: 20px;
+  top: 40%;
+  left: 5%;
+  animation-delay: 5s;
+  transform: rotate(-15deg);
+}
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0px) rotate(var(--start-rotation, 0deg));
+  }
+  50% {
+    transform: translateY(-20px) rotate(calc(var(--start-rotation, 0deg) + 180deg));
+  }
+}
+/* Glass container styles */
+.glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+/* Header styles */
+header {
+  padding: 20px;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Page system */
+.page {
+  display: none;
+  min-height: 100vh;
+  padding: 40px 20px 20px;
+}
+.page.active {
+  display: block;
+}
+/* Content wrapper to contain page content */
+.content-wrapper {
+  min-height: calc(100vh - 300px);
+}
+
+/* Responsive design */
+@media (max-width: 1024px) {
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (max-width: 768px) {
+  /* Adjust padding for mobile */
+  .page {
+    padding: 30px 20px 20px;
+  }
+  .content-wrapper {
+    min-height: auto;
+  }
+  .hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 20px;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+  nav {
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 30px;
+  }
+  .nav-links {
+    gap: 15px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-links a {
+    display: block;
+    text-align: center;
+    width: 100%;
+    max-width: 200px;
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+  .about-content,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .footer-links {
+    gap: 15px;
+    flex-direction: column;
+  }
+  .footer-links a {
+    display: block;
+    text-align: center;
+  }
+  button[type='submit'] {
+    width: 100%;
+  }
+  .map-container {
+    height: 350px;
+  }
+  .logo-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .logo {
+    font-size: 22px;
+  }
+}
