@@ -1,1 +1,32 @@
-<p>events works!</p>
+<body>
+  <div id="events" class="page active">
+    <div class="container">
+      <div class="content-wrapper">
+        <section class="hero glass">
+          <h1>Upcoming Alumni Events</h1>
+          <p>
+            Stay connected, inspired, and ahead of the curve with exclusive CodeFactory Alumni
+            events.
+          </p>
+        </section>
+
+        <section class="events-grid">
+          @for(event of events; track $index){
+          <div class="events-card glass">
+            <div class="events-header">
+              <div class="events-icon">{{ event.icon }}</div>
+              <h3>{{ event.name }}</h3>
+            </div>
+            <p>{{ event.description }}</p>
+            <ul>
+              <li>Date: {{ event.date }}</li>
+              <li>Time: {{ event.time }}</li>
+              <li>Location: {{ event.location }}</li>
+            </ul>
+          </div>
+          }
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
