@@ -1,0 +1,126 @@
+import { ICareer } from './icareer.interface';
+
+export const careers: ICareer[] = [
+  {
+    id: 1,
+    title: 'Frontend Angular Developer',
+    company: 'Siemens',
+    location: 'Munich, Germany',
+    type: 'Full-time',
+    description:
+      'Develop and maintain Angular-based web applications for industrial automation solutions.',
+    requirements: [
+      '3+ years of Angular experience',
+      'Proficiency in TypeScript, HTML, CSS',
+      'Experience with RESTful APIs and RxJS',
+    ],
+    responsibilities: [
+      'Develop reusable Angular components',
+      'Collaborate with UX/UI designers',
+      'Optimize application performance',
+    ],
+    applyUrl: 'https://jobs.siemens.com/frontend-angular-developer',
+    postedDate: '2025-10-20',
+  },
+  {
+    id: 2,
+    title: 'Senior Angular Developer',
+    company: 'Spotify',
+    location: 'Stockholm, Sweden',
+    type: 'Full-time',
+    description: 'Lead development of new user-facing features in the music streaming platform.',
+    requirements: [
+      '5+ years of Angular experience',
+      'Strong TypeScript and JavaScript skills',
+      'Experience with version control (Git)',
+    ],
+    responsibilities: [
+      'Design scalable Angular modules',
+      'Mentor junior developers',
+      'Coordinate with backend engineers',
+    ],
+    applyUrl: 'https://www.spotify.com/careers/angular-senior-dev',
+    postedDate: '2025-10-19',
+  },
+  {
+    id: 3,
+    title: 'Angular UI Developer',
+    company: 'Booking.com',
+    location: 'Amsterdam, Netherlands',
+    type: 'Full-time',
+    description: 'Work on booking interfaces, improving UX and UI for millions of users.',
+    requirements: [
+      '3+ years Angular development experience',
+      'Knowledge of Angular Material and SCSS',
+      'Experience with unit testing frameworks',
+    ],
+    responsibilities: [
+      'Implement responsive UI components',
+      'Collaborate with designers to improve user experience',
+      'Maintain code quality through testing and reviews',
+    ],
+    applyUrl: 'https://careers.booking.com/angular-ui-developer',
+    postedDate: '2025-10-18',
+  },
+  {
+    id: 4,
+    title: 'Frontend Developer (Angular)',
+    company: 'Zalando',
+    location: 'Berlin, Germany',
+    type: 'Full-time',
+    description: 'Develop features for Zalando’s e-commerce platform using Angular and TypeScript.',
+    requirements: [
+      'Experience with Angular 14+',
+      'Familiarity with REST APIs and JSON',
+      'Strong debugging and problem-solving skills',
+    ],
+    responsibilities: [
+      'Build modular Angular components',
+      'Ensure cross-browser compatibility',
+      'Participate in code reviews and team meetings',
+    ],
+    applyUrl: 'https://jobs.zalando.com/frontend-angular',
+    postedDate: '2025-10-17',
+  },
+  {
+    id: 5,
+    title: 'Angular Developer',
+    company: 'Revolut',
+    location: 'London, United Kingdom',
+    type: 'Full-time',
+    description: 'Join the finance tech team to enhance Revolut’s customer web dashboard.',
+    requirements: [
+      '3+ years experience with Angular',
+      'Understanding of component-based architecture',
+      'Experience with RxJS and NgRx',
+    ],
+    responsibilities: [
+      'Develop and maintain Angular applications',
+      'Collaborate with backend engineers and designers',
+      'Optimize code for performance and scalability',
+    ],
+    applyUrl: 'https://www.revolut.com/careers/angular-developer',
+    postedDate: '2025-10-16',
+  },
+  {
+    id: 6,
+    title: 'Junior Angular Developer',
+    company: 'Adyen',
+    location: 'Amsterdam, Netherlands',
+    type: 'Full-time',
+    description:
+      'Support the frontend team in developing and maintaining payment solutions dashboards.',
+    requirements: [
+      '1-2 years Angular experience',
+      'Familiarity with TypeScript, HTML, CSS',
+      'Eagerness to learn and grow in a fast-paced environment',
+    ],
+    responsibilities: [
+      'Assist in developing Angular components',
+      'Fix bugs and implement enhancements',
+      'Work under senior developer guidance',
+    ],
+    applyUrl: 'https://www.adyen.com/careers/junior-angular-developer',
+    postedDate: '2025-10-15',
+  },
+];
