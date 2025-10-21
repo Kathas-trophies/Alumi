@@ -1,24 +1,11 @@
-@charset "utf-8";
-<<<<<<< HEAD
-=======
-/*
-
-TemplateMo 592 glossy touch
-
-https://templatemo.com/tm-592-glossy-touch
-
-*/
->>>>>>> a23a02970d0b1625c4618fc4db7fb5c7bacf07a6
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  button[type='submit'] {
-    font-family: inherit;
-    font-size: 16px;
-  }
+  font-family: inherit;
+  font-size: 16px;
 }
+
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   background: linear-gradient(
@@ -137,9 +124,6 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
-<<<<<<< HEAD
-
-=======
 /* Navigation styles */
 nav {
   display: flex;
@@ -195,7 +179,6 @@ nav {
   background: rgba(255, 255, 255, 0.1);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
 }
->>>>>>> a23a02970d0b1625c4618fc4db7fb5c7bacf07a6
 /* Page system */
 .page {
   display: none;
@@ -209,9 +192,6 @@ nav {
 .content-wrapper {
   min-height: calc(100vh - 300px);
 }
-<<<<<<< HEAD
-
-=======
 /* Home page styles */
 .hero {
   display: grid;
@@ -660,7 +640,6 @@ button[type='submit'] {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
->>>>>>> a23a02970d0b1625c4618fc4db7fb5c7bacf07a6
 /* Responsive design */
 @media (max-width: 1024px) {
   .team-grid {
