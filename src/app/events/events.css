@@ -1,4 +1,4 @@
-.glass {
+.events-glass {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255, 255, 255, 0.2);
@@ -8,13 +8,13 @@
   position: relative;
   overflow: hidden;
 }
-.glass:hover {
+.events-glass:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-5px);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
 }
 
-.hero h1 {
+.events-hero h1 {
   font-size: 2.8rem;
   color: white;
   margin-bottom: 20px;
@@ -22,18 +22,18 @@
   line-height: 1.2;
 }
 
-.hero p {
+.events-hero p {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 30px;
   line-height: 1.6;
 }
 
-.content-wrapper {
+.events-content-wrapper {
   min-height: calc(100vh - 300px);
 }
 
-.hero {
+.events-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 40px;
@@ -41,35 +41,35 @@
   padding: 60px 40px;
   margin-bottom: 40px;
 }
-.hero-image {
+.events-hero-image {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-.hero-image img {
+.events-hero-image img {
   width: 100%;
   max-width: 440px;
   height: auto;
   border-radius: 20px;
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
 }
-.hero-content {
+.events-hero-content {
   text-align: left;
 }
-.hero h1 {
+.events-hero h1 {
   font-size: 2.8rem;
   color: white;
   margin-bottom: 20px;
   text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   line-height: 1.2;
 }
-.hero p {
+.events-hero p {
   font-size: 1.2rem;
   color: rgba(255, 255, 255, 0.9);
   margin-bottom: 30px;
   line-height: 1.6;
 }
-.cta-button {
+.events-cta-button {
   display: inline-block;
   padding: 15px 40px;
   background: rgba(255, 255, 255, 0.2);
@@ -82,15 +82,17 @@
   border: 2px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
 }
-.cta-button:hover {
+.events-cta-button:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
-button[type='submit'] {
+.events-button[type='submit'] {
   font-family: inherit;
   font-size: 16px;
 }
+
+/* Starting*/
 
 .events-grid {
   display: grid;
