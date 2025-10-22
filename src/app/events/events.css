@@ -1,3 +1,11 @@
+.events-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
 .events-glass {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);

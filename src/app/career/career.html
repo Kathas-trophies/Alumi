@@ -9,7 +9,7 @@
 
         <section class="companies-grid">
           @for(companie of companies; track $index){
-          <div class="companies-card glass">
+          <div class="companies-card career-glass">
             <div class="companies-header">
               <img
                 [src]="'/img/' + companie.logo"
@@ -33,7 +33,7 @@
               </li>
             </ul>
             <p>{{ companie.description }}</p>
-            <button class="career-cta-button">Apply</button>
+            <button class="career-cta-button">Learn more</button>
           </div>
           }
         </section>
