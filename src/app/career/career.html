@@ -1,8 +1,8 @@
 <body>
-  <div id="services" class="page active">
-    <div class="container">
-      <div class="content-wrapper">
-        <section class="hero glass">
+  <div id="career" class="page active">
+    <div class="career-container">
+      <div class="career-content-wrapper">
+        <section class="career-hero career-glass">
           <h1>Get to know our Partner-Companies</h1>
           <img class="companies-picture" src="img/partner-companies.jpg" />
         </section>
@@ -33,18 +33,18 @@
               </li>
             </ul>
             <p>{{ companie.description }}</p>
-            <button class="cta-button">Apply</button>
+            <button class="career-cta-button">Apply</button>
           </div>
           }
         </section>
-        <section class="hero glass">
+        <section class="career-hero career-glass">
           <h1>Job Postings for Code Factory Alumni</h1>
           <p>Find your new job opportunity right here.</p>
         </section>
 
         <section class="career-grid">
           @for(career of career; track $index){
-          <div class="career-card glass">
+          <div class="career-card career-glass">
             <div class="career-header">
               <h3>{{ career.title }}</h3>
             </div>
@@ -54,7 +54,7 @@
               <li><b>Location:</b> {{ career.description }}</li>
               <li><b>Location:</b> {{ career.requirements }}</li>
             </ul>
-            <button class="cta-button">Apply</button>
+            <button class="career-cta-button">Apply</button>
           </div>
           }
         </section>

@@ -1,3 +1,98 @@
+.career-glass {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+.career-glass:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+}
+
+.career-hero h1 {
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+
+.career-hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+
+.career-content-wrapper {
+  min-height: calc(100vh - 300px);
+}
+
+.career-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+  padding: 60px 40px;
+  margin-bottom: 40px;
+}
+.career-hero-image {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.career-hero-image img {
+  width: 100%;
+  max-width: 440px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+.career-hero-content {
+  text-align: left;
+}
+.career-hero h1 {
+  font-size: 2.8rem;
+  color: white;
+  margin-bottom: 20px;
+  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+.career-hero p {
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 30px;
+  line-height: 1.6;
+}
+.career-cta-button {
+  display: inline-block;
+  padding: 15px 40px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  font-weight: 600;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: all 0.3s ease;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+}
+.career-cta-button:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+.career-button[type='submit'] {
+  font-family: inherit;
+  font-size: 16px;
+}
+
+/* Carreer*/
 .career-grid {
   display: grid;
   grid-template-columns: 1fr;
@@ -54,7 +149,7 @@
 
 .companies-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 40px;
 }
@@ -135,5 +230,88 @@
 
   .companies-card h3 {
     font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .companies-card {
+    padding: 30px;
+  }
+
+  .companies-card h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* 🌐 Tablet screens (stack hero, 2-column companies) */
+@media (max-width: 992px) {
+  .career-hero {
+    grid-template-columns: 1fr; /* ✅ stack image + text */
+    text-align: center;
+    padding: 40px 20px;
+  }
+
+  .career-hero h1 {
+    font-size: 2rem;
+  }
+
+  .career-hero p {
+    font-size: 1rem;
+  }
+
+  .companies-grid {
+    grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns on tablets */
+    gap: 20px;
+  }
+
+  .companies-card {
+    padding: 25px;
+  }
+}
+
+/* 📱 Small screens (phones) */
+@media (max-width: 600px) {
+  .career-hero {
+    grid-template-columns: 1fr; /* ✅ force single column */
+    gap: 20px;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .career-hero h1 {
+    font-size: 1.6rem;
+    line-height: 1.3;
+  }
+
+  .career-hero p {
+    font-size: 0.95rem;
+  }
+
+  .companies-grid {
+    grid-template-columns: 1fr; /* ✅ 1 column on mobile */
+    gap: 15px;
+  }
+
+  .companies-card {
+    padding: 20px;
+  }
+
+  .companies-logo {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+  }
+
+  .career-cta-button {
+    width: 100%; /* ✅ full-width button for mobile */
+    text-align: center;
+  }
+
+  .companies-picture {
+    max-width: 250px; /* ✅ smaller image */
   }
 }
