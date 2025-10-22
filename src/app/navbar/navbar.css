@@ -1,13 +1,19 @@
 header {
   padding: 20px;
 }
-nav {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 45px;
+  padding: 15px 45px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.3);
 }
-.logo {
+
+.navbar-brand.logo {
   font-size: 32px;
   font-weight: bold;
   color: white;
@@ -16,6 +22,7 @@ nav {
   align-items: center;
   gap: 15px;
   cursor: pointer;
+  padding-right: 0;
 }
 .logo-icon {
   width: 64px;
@@ -24,13 +31,7 @@ nav {
   align-items: center;
   justify-content: center;
 }
-.logo-icon svg {
-  width: 100%;
-  height: 100%;
-  filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.3));
-  transition: all 0.3s ease;
-}
-.logo:hover .logo-icon svg {
+.navbar-brand .logo:hover {
   transform: scale(1.1) translateY(-2px);
   filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.4));
 }
@@ -38,7 +39,11 @@ nav {
   display: flex;
   gap: 30px;
 }
-.nav-links a {
+.navbar-collapse {
+  margin-left: auto;
+}
+.nav-links a.nav-link {
+  /* Korrigierter Selektor, falls er im HTML nicht direkt auf a.nav-link zugreift */
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 500;
@@ -48,10 +53,61 @@ nav {
   cursor: pointer;
   font-size: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+  background-color: transparent;
 }
-.nav-links a:hover,
-.nav-links a.active {
+.navbar-collapse .nav-links a.nav-link:hover,
+.navbar-collapse .nav-links a.nav-link.active {
   color: white;
   background: rgba(255, 255, 255, 0.1);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+}
+.navbar-toggler {
+  border: none;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 8px;
+  padding: 8px 14px;
+  transition: all 0.3s ease;
+  width: 78px;
+}
+.navbar-toggler:focus {
+  box-shadow: 0 0 0 0.25rem rgba(255, 255, 255, 0.5);
+}
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+/* Responsive */
+@media (max-width: 767.98px) {
+  .navbar {
+    flex-direction: row;
+    padding: 15px 20px;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-collapse {
+    width: 100%;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    align-items: flex-end; /* Richtet die Links als Block nach rechts aus */
+  }
+  .nav-links a.nav-link {
+    width: 85px; /* Die Links passen sich an den Inhalt an */
+    max-width: 250px;
+    padding: 10px 15px; /* Angepasstes Padding für bessere Ausrichtung */
+    font-size: 15px;
+    margin-left: 0; /* Entfernt unerwünschten linken Rand */
+    margin-right: 0; /* Stellt sicher, dass kein rechter Rand stört */
+    text-align: center; /* Richtet den Text innerhalb des Links rechts aus */
+  }
+  .navbar-brand.logo {
+    font-size: 24px;
+    gap: 10px;
+  }
+  .logo-icon {
+    width: 48px;
+    height: 48px;
+  }
 }
