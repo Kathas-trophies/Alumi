@@ -679,6 +679,13 @@ button[type='submit'] {
   text-decoration: none;
 }
 
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
 /* Responsive design */
 @media (max-width: 1024px) {
   .team-grid {
