@@ -1,1 +1,89 @@
-<p>stories works!</p>
+<article
+  class="card"
+  (click)="open.emit(story)"
+  tabindex="0"
+  role="button"
+  aria-label="Story öffnen"
+>
+  <div class="media" *ngIf="story.imageUrl">
+    <img [src]="story.imageUrl" [alt]="story.title" loading="lazy" />
+  </div>
+  <div class="body">
+    <div class="meta">
+      <span class="author">{{ story.author }}</span>
+      <span class="dot">•</span>
+      <time [attr.datetime]="story.date">{{ story.date | date : 'dd.MM.yyyy' }}</time>
+    </div>
+    <h3 class="title">{{ story.title }}</h3>
+    <p class="excerpt">{{ story.excerpt }}</p>
+    <div class="tags">
+      <span class="tag" *ngFor="let t of story.tags">{{ t }}</span>
+    </div>
+  </div>
+</article>
+
+<div class="filters">
+  <mat-form-field appearance="outline" class="search">
+    <mat-label>Suche</mat-label>
+    <input
+      matInput
+      [value]="query"
+      (input)="queryChange.emit($any($event.target).value)"
+      placeholder="Titel, Autor, Tag…"
+    />
+    <button
+      mat-icon-button
+      matSuffix
+      *ngIf="query"
+      (click)="queryChange.emit('')"
+      aria-label="Suche löschen"
+    >
+      <mat-icon>close</mat-icon>
+    </button>
+  </mat-form-field>
+
+  <div class="tags" *ngIf="allTags?.length">
+    <button
+      mat-stroked-button
+      [color]="activeTag === null ? 'primary' : undefined"
+      (click)="setTag(null)"
+    >
+      Alle
+    </button>
+    <button
+      mat-stroked-button
+      *ngFor="let t of allTags"
+      [disabled]="activeTag === t"
+      (click)="setTag(t)"
+    >
+      {{ t }}
+    </button>
+  </div>
+</div>
+
+<div class="detail">
+  <h2>{{ data.story.title }}</h2>
+  <p class="meta">Von {{ data.story.author }} · {{ data.story.date | date : 'dd.MM.yyyy' }}</p>
+  <img *ngIf="data.story.imageUrl" [src]="data.story.imageUrl" [alt]="data.story.title" />
+  <p class="content">{{ data.story.content }}</p>
+</div>
+
+<section class="wrapper">
+  <header class="head">
+    <h1>Stories</h1>
+    <p class="sub">Aktuelle Beiträge, Updates & Einblicke.</p>
+  </header>
+
+  <alumi-story-filters
+    [allTags]="allTags"
+    [activeTag]="activeTag"
+    [query]="queryCtrl.value"
+    (queryChange)="queryCtrl.setValue($event)"
+    (tagChange)="setTag($event)"
+  ></alumi-story-filters>
+
+  <div class="grid" *ngIf="filtered$ | async as items">
+    <alumi-story-card *ngFor="let s of items" [story]="s" (open)="open($event)"></alumi-story-card>
+    <p class="empty" *ngIf="!items.length">Keine Stories gefunden.</p>
+  </div>
+</section>

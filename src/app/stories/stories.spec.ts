@@ -1,23 +1,18 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
+import { provideRouter } from '@angular/router';
+import STORIES_ROUTES, { StoriesPageComponent } from './stories';
 
-import { Stories } from './stories';
-
-describe('Stories', () => {
-  let component: Stories;
-  let fixture: ComponentFixture<Stories>;
-
+describe('StoriesPageComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [Stories]
-    })
-    .compileComponents();
-
-    fixture = TestBed.createComponent(Stories);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+      imports: [StoriesPageComponent],
+      providers: [provideRouter(STORIES_ROUTES)],
+    }).compileComponents();
   });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should create the Stories page', () => {
+    const fixture = TestBed.createComponent(StoriesPageComponent);
+    const cmp = fixture.componentInstance;
+    expect(cmp).toBeTruthy();
   });
 });
