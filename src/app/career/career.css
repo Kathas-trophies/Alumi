@@ -5,8 +5,6 @@
   border-radius: 20px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
 }
 .career-glass:hover {
   background: rgba(255, 255, 255, 0.2);
@@ -41,34 +39,7 @@
   padding: 60px 40px;
   margin-bottom: 40px;
 }
-.career-hero-image {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.career-hero-image img {
-  width: 100%;
-  max-width: 440px;
-  height: auto;
-  border-radius: 20px;
-  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
-}
-.career-hero-content {
-  text-align: left;
-}
-.career-hero h1 {
-  font-size: 2.8rem;
-  color: white;
-  margin-bottom: 20px;
-  text-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-  line-height: 1.2;
-}
-.career-hero p {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.9);
-  margin-bottom: 30px;
-  line-height: 1.6;
-}
+
 .career-cta-button {
   display: inline-block;
   padding: 15px 40px;
@@ -86,10 +57,6 @@
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-3px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
-}
-.career-button[type='submit'] {
-  font-family: inherit;
-  font-size: 16px;
 }
 
 /* Carreer*/
@@ -212,45 +179,11 @@
   margin: 15px auto 0;
 }
 
-@media (max-width: 480px) {
-  .companies-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
+/* Medium screens */
 
-  .companies-card {
-    padding: 20px;
-  }
-
-  .companies-logo {
-    width: 80px;
-    height: 80px;
-    margin-right: 10px;
-  }
-
-  .companies-card h3 {
-    font-size: 1.2rem;
-  }
-}
-
-@media (max-width: 992px) {
-  .companies-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .companies-card {
-    padding: 30px;
-  }
-
-  .companies-card h3 {
-    font-size: 1.3rem;
-  }
-}
-
-/* 🌐 Tablet screens (stack hero, 2-column companies) */
 @media (max-width: 992px) {
   .career-hero {
-    grid-template-columns: 1fr; /* ✅ stack image + text */
+    grid-template-columns: 1fr;
     text-align: center;
     padding: 40px 20px;
   }
@@ -264,7 +197,7 @@
   }
 
   .companies-grid {
-    grid-template-columns: repeat(2, 1fr); /* ✅ 2 columns on tablets */
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
@@ -273,10 +206,10 @@
   }
 }
 
-/* 📱 Small screens (phones) */
+/* Small screens */
 @media (max-width: 600px) {
   .career-hero {
-    grid-template-columns: 1fr; /* ✅ force single column */
+    grid-template-columns: 1fr;
     gap: 20px;
     text-align: center;
     padding: 20px;
@@ -292,7 +225,7 @@
   }
 
   .companies-grid {
-    grid-template-columns: 1fr; /* ✅ 1 column on mobile */
+    grid-template-columns: 1fr;
     gap: 15px;
   }
 
@@ -307,11 +240,11 @@
   }
 
   .career-cta-button {
-    width: 100%; /* ✅ full-width button for mobile */
+    width: 100%;
     text-align: center;
   }
 
   .companies-picture {
-    max-width: 250px; /* ✅ smaller image */
+    max-width: 250px;
   }
 }
