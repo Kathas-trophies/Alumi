@@ -1,6 +1,6 @@
 <!-- SINGLE NAVIGATION HEADER -->
-<header>
-  <div class="container">
+<header class="pt-5 pb-5">
+  <div class="container p-5 mt-4">
     <nav class="navbar navbar-expand-md glass">
       <!-- 'navbar-expand-md' für das Breakpoint, ab dem die Navbar expandiert -->
       <a class="navbar-brand logo" routerLink="/">
@@ -23,14 +23,24 @@
 
         <!-- Navigationslinks, die ein- und ausgeklappt werden -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <div class="nav-links ms-auto">
+          <ul class="navbar-nav ms-auto">
             <!-- Dein vorhandenes Styling bleibt hier erhalten -->
-            <a routerLink="/" class="nav-link">Home</a>
-            <a routerLink="/alumni" class="nav-link">Alumni</a>
-            <a routerLink="/career" class="nav-link">Career</a>
-            <a routerLink="/stories" class="nav-link">Stories</a>
-            <a routerLink="/events" class="nav-link">Events</a>
-          </div>
+            <li class="nav-item">
+              <a routerLink="/" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/alumni" class="nav-link">Alumni</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/career" class="nav-link">Career</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/stories" class="nav-link">Stories</a>
+            </li>
+            <li class="nav-item">
+              <a routerLink="/events" class="nav-link">Events</a>
+            </li>
+          </ul>
         </div>
       </div>
     </nav>
