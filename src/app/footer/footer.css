@@ -34,7 +34,9 @@
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
-
+.mobile-break {
+  display: none;
+}
 /* Responsive */
 @media (max-width: 768px) {
   .footer-links {
@@ -43,5 +45,10 @@
   .footer-links a {
     display: block;
     text-align: center;
+  }
+}
+@media (max-width: 320px) {
+  .mobile-break {
+    display: block;
   }
 }
