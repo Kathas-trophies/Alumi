@@ -96,14 +96,34 @@ button[type='submit'] {
 .partners-logo-container {
   display: flex;
   justify-content: center;
-  gap: 50px;
   align-items: center;
   background-color: rgba(255, 255, 255, 0.2);
   border-radius: 20px;
   padding: 30px;
-  width: 55%;
+  width: 85%; /* Etwas breiter, um mehr Platz zu bieten */
+  max-width: 1000px; /* Begrenzt die maximale Breite für sehr große Bildschirme */
   margin: 40px auto;
+  gap: 30px; /* Reduzierter Gap, um Logos besser passen zu lassen */
+  flex-wrap: wrap; /* ERMÖGLICHT den Umbruch in die nächste Zeile bei Platzmangel */
+  box-sizing: border-box; /* Wichtig für korrekte Breitenberechnung */
 }
+.partner-logo-link {
+  flex-basis: 180px; /* Jedes Logo bekommt eine Basisbreite */
+  flex-grow: 1; /* Logos können wachsen, um verfügbaren Platz zu füllen */
+  flex-shrink: 1; /* Logos können schrumpfen, wenn der Platz knapp wird */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90px; /* Feste Höhe für die Links, für einheitliches Aussehen */
+}
+.partners-logo-container img.companies-logo {
+  max-width: 100%; /* Bild füllt den Link-Container aus */
+  max-height: 100%; /* Bildhöhe wird begrenzt */
+  height: auto; /* Seitenverhältnis beibehalten */
+  width: auto; /* Seitenverhältnis beibehalten */
+  object-fit: contain; /* Passt das Bild an, ohne es zu beschneiden */
+}
+
 /* Responsive */
 @media (max-width: 768px) {
   .partners-logo-container {
