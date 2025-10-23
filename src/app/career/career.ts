@@ -3,10 +3,11 @@ import { ICareer } from '../icareer.interface';
 import { careers } from '../career';
 import { ICompanies } from '../icompanies.interface';
 import { companies } from '../companies';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-career',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './career.html',
   styleUrl: './career.css',
 })

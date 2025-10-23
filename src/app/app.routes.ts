@@ -4,6 +4,7 @@ import { Alumni } from './alumni/alumni';
 import { Career } from './career/career';
 import { Events } from './events/events';
 import { StoriesPageComponent } from './stories/stories';
+import { Companies } from './career/companies/companies';
 
 export const routes: Routes = [
   { path: '', component: Home },
@@ -14,4 +15,5 @@ export const routes: Routes = [
     path: 'stories',
     component: StoriesPageComponent,
   },
+  { path: 'details/:id', component: Companies },
 ];
