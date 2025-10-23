@@ -1,16 +1,21 @@
-header {
-  padding: 20px;
-}
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 15px 45px;
-  background: rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.412);
   border-radius: 15px;
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
+  position: absolute; /* Geändert von fixed zu absolute, da es im Screenshot nicht scrollt und relativ zum Container ist */
+  transform: translate(-50%, 0); /* Nur X-Achse zentrieren */
+  left: 50%;
+  top: 5%; /* Angepasst, um die Positionierung wie im Bild zu erreichen */
+  z-index: 1;
+  width: 71%; /* Beibehalten wie gewünscht */
+  max-width: 1300px; /* Füge einen max-width hinzu, um die Länge genauer zu steuern, wenn der Bildschirm größer wird */
+  margin: 0 auto; /* Zentriert die Navbar horizontal im Container, wenn absolute/fixed nicht verwendet wird */
 }
 
 .navbar-brand.logo {
@@ -38,15 +43,17 @@ header {
   transform: scale(1.1) translateY(-2px);
   filter: drop-shadow(0 4px 12px rgba(255, 255, 255, 0.4));
 }
-.nav-links {
+.navbar-nav {
+  /* Geändert von .nav-links zu .navbar-nav */
   display: flex;
   gap: 30px;
 }
 .navbar-collapse {
+  flex-grow: 0; /* Verhindert, dass der Collapse-Bereich den gesamten verfügbaren Platz einnimmt */
   margin-left: auto;
 }
-.nav-links a.nav-link {
-  /* Korrigierter Selektor, falls er im HTML nicht direkt auf a.nav-link zugreift */
+.navbar-nav .nav-item .nav-link {
+  /* Korrigierter Selektor für die neuen ul/li Struktur */
   color: rgba(255, 255, 255, 0.9);
   text-decoration: none;
   font-weight: 500;
@@ -57,12 +64,14 @@ header {
   font-size: 16px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.6);
   background-color: transparent;
+  white-space: nowrap; /* Verhindert Zeilenumbrüche in den Nav-Links */
 }
-.navbar-collapse .nav-links a.nav-link:hover,
-.navbar-collapse .nav-links a.nav-link.active {
+.navbar-nav .nav-item .nav-link:hover,
+.navbar-nav .nav-item .nav-link.active {
   color: white;
   background: rgba(255, 255, 255, 0.1);
   text-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  border-bottom-color: transparent; /* Entfernt den unteren Rand beim Hover/Active */
 }
 .navbar-toggler {
   border: none;
@@ -79,6 +88,7 @@ header {
 .navbar-toggler-icon {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
+
 /* Responsive */
 @media (max-width: 767.98px) {
   .navbar {
@@ -86,25 +96,28 @@ header {
     padding: 15px 20px;
     justify-content: space-between;
     align-items: center;
+    top: 10%;
     flex-wrap: nowrap;
+    width: 79%;
   }
   .navbar-collapse {
     width: 100%;
   }
-  .nav-links {
+  .navbar-nav {
+    /* Geändert von .nav-links zu .navbar-nav */
     flex-direction: column;
     gap: 10px;
     width: 100%;
     align-items: flex-end; /* Richtet die Links als Block nach rechts aus */
   }
-  .nav-links a.nav-link {
+  .navbar-nav .nav-item .nav-link {
+    /* Korrigierter Selektor */
     width: 85px; /* Die Links passen sich an den Inhalt an */
     max-width: 250px;
     padding: 10px 15px; /* Angepasstes Padding für bessere Ausrichtung */
     font-size: 15px;
-    margin-left: 0; /* Entfernt unerwünschten linken Rand */
-    margin-right: 0; /* Stellt sicher, dass kein rechter Rand stört */
     text-align: center; /* Richtet den Text innerhalb des Links rechts aus */
+    margin: 3px 0;
   }
   .navbar-brand.logo {
     font-size: 24px;
@@ -114,4 +127,5 @@ header {
     width: 50%;
     height: 50%;
   }
+  /* .wrapnav wurde entfernt, da es im HTML nicht existiert und keine Funktion hatte */
 }
