@@ -1,5 +1,4 @@
 #footer {
-  margin-top: 60px;
   padding: 30px 0;
 }
 .footer-content {
@@ -40,7 +39,6 @@
 @media (max-width: 768px) {
   .footer-links {
     gap: 15px;
-    flex-direction: column;
   }
   .footer-links a {
     display: block;
