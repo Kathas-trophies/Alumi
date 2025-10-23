@@ -1,33 +1,34 @@
-<div class="career-container">
-  <div class="career-content-wrapper">
-    <section class="career-hero career-glass">
-      @if (company) {
-      <h1>{{ company.name }}</h1>
-      <img
-        class="companies-picture"
-        [src]="'/img/' + company.logo"
-        [alt]="company.name + ' logo'"
-        class="companies-logo"
-      />
+<div id="career" class="page active">
+  <div class="career-container">
+    <div class="career-content-wrapper">
+      <section class="career-hero career-glass">
+        @if (company) {
+        <h1>{{ company.name }}</h1>
+        <img
+          class="companies-picture"
+          [src]="'/img/' + company.logo"
+          [alt]="company.name + ' logo'"
+          class="companies-logo"
+        />
 
-      <ul>
-        <li><b>Industry:</b> {{ company.industry }}</li>
-        <li><b>Location:</b> {{ company.location }}</li>
-        <li>
-          <b>Website: </b>
-          <a
-            class="companies-link"
-            [href]="company.website"
-            target="_blank"
-            rel="noopener noreferrer"
-            >{{ company.website }}</a
-          >
-        </li>
-      </ul>
+        <ul>
+          <li><b>Industry:</b> {{ company.industry }}</li>
+          <li><b>Location:</b> {{ company.location }}</li>
+          <li>
+            <b>Website: </b>
+            <a
+              class="companies-link"
+              [href]="company.website"
+              target="_blank"
+              rel="noopener noreferrer"
+              >{{ company.website }}</a
+            >
+          </li>
+        </ul>
 
-      <p>{{ company.description }}</p>
-
-      }
-    </section>
+        <p>{{ company.description }}</p>
+        }
+      </section>
+    </div>
   </div>
 </div>

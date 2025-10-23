@@ -6,6 +6,9 @@
   box-sizing: border-box;
 }
 
+/* ==========================
+   HERO SECTIONS
+========================== */
 .career-hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -30,6 +33,9 @@
   line-height: 1.6;
 }
 
+/* ==========================
+   GLASSMORPHISM CARD STYLE
+========================== */
 .career-glass {
   background: rgba(255, 255, 255, 0.15);
   backdrop-filter: blur(20px);
@@ -38,30 +44,35 @@
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
 }
+
 .career-glass:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-5px);
   box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
 }
 
-/* COMPANIES */
-
+/* ==========================
+   COMPANIES SECTION
+========================== */
 .companies-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
   margin-bottom: 40px;
 }
+
 .companies-card {
   padding: 40px 30px;
   color: white;
   text-align: left;
 }
+
 .companies-header {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .companies-logo {
   width: 100px;
   height: 100px;
@@ -70,27 +81,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
   margin-right: 15px;
 }
+
 .companies-card h3 {
   font-size: 1.4rem;
   color: white;
 }
+
 .companies-card p {
   color: rgba(255, 255, 255, 0.8);
   line-height: 1.6;
   margin-bottom: 20px;
 }
+
 .companies-features {
   list-style: none;
 }
+
 .companies-features li {
   color: rgba(255, 255, 255, 0.7);
   margin-bottom: 8px;
   padding-left: 20px;
   position: relative;
 }
+
 .companies-features li:before {
   content: '✓';
   position: absolute;
@@ -109,8 +124,12 @@
   max-width: 320px;
   height: auto;
   margin: 15px auto 0;
+  display: block;
 }
 
+/* ==========================
+   BUTTONS
+========================== */
 .career-cta-button {
   display: inline-block;
   padding: 15px 40px;
@@ -124,6 +143,7 @@
   border: 2px solid rgba(255, 255, 255, 0.3);
   cursor: pointer;
 }
+
 .career-cta-button:hover {
   background: rgba(255, 255, 255, 0.3);
   transform: translateY(-3px);
@@ -135,24 +155,32 @@
   text-decoration: none;
 }
 
-/* Carreer*/
-
+/* ==========================
+   CAREERS / JOBS SECTION
+========================== */
 .career-grid {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr; /* <-- Always stacked */
   gap: 30px;
   margin-bottom: 40px;
 }
+
 .career-card {
   padding: 40px 30px;
   color: white;
   text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: auto;
 }
+
 .career-header {
   display: flex;
   align-items: center;
   margin-bottom: 20px;
 }
+
 .career-icon {
   width: 50px;
   height: 50px;
@@ -161,36 +189,31 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 20px;
   margin-right: 15px;
 }
+
 .career-card h3 {
   font-size: 1.4rem;
   color: white;
 }
-.career-card p {
-  color: rgba(255, 255, 255, 0.8);
-  line-height: 1.6;
+
+.career-card ul {
+  padding-left: 0;
+  list-style: none;
   margin-bottom: 20px;
 }
-.career-features {
-  list-style: none;
-}
-.career-features li {
-  color: rgba(255, 255, 255, 0.7);
+
+.career-card li {
+  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 8px;
-  padding-left: 20px;
-  position: relative;
-}
-.career-features li:before {
-  content: '✓';
-  position: absolute;
-  left: 0;
-  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
 }
 
-/* Medium screens */
+/* ==========================
+   RESPONSIVE BREAKPOINTS
+========================== */
 
+/* MEDIUM SCREENS */
 @media (max-width: 992px) {
   .career-hero {
     grid-template-columns: 1fr;
@@ -214,9 +237,13 @@
   .companies-card {
     padding: 25px;
   }
+
+  .career-card {
+    padding: 25px;
+  }
 }
 
-/* Small screens */
+/* SMALL SCREENS */
 @media (max-width: 600px) {
   .career-hero {
     grid-template-columns: 1fr;
@@ -241,6 +268,12 @@
 
   .companies-card {
     padding: 20px;
+    text-align: center;
+  }
+
+  .career-card {
+    padding: 20px;
+    text-align: center;
   }
 
   .companies-logo {
