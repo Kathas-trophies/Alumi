@@ -20,6 +20,7 @@ export const careers: ICareer[] = [
       'Optimize application performance',
     ],
     applyUrl: 'https://jobs.siemens.com/frontend-angular-developer',
+    email: 'careers@siemens.com',
     postedDate: '2025-10-20',
   },
   {
@@ -41,6 +42,7 @@ export const careers: ICareer[] = [
       'Mentor junior developers and review pull requests',
     ],
     applyUrl: 'https://www.spotify.com/careers/fullstack-js-developer',
+    email: 'jobs@spotify.com',
     postedDate: '2025-10-19',
   },
   {
@@ -62,6 +64,7 @@ export const careers: ICareer[] = [
       'Maintain code quality through automated testing',
     ],
     applyUrl: 'https://careers.booking.com/vue-frontend-engineer',
+    email: 'techcareers@booking.com',
     postedDate: '2025-10-18',
   },
   {
@@ -83,6 +86,7 @@ export const careers: ICareer[] = [
       'Participate in architecture and code reviews',
     ],
     applyUrl: 'https://jobs.zalando.com/backend-java-engineer',
+    email: 'engineering@zalando.de',
     postedDate: '2025-10-17',
   },
   {
@@ -104,6 +108,7 @@ export const careers: ICareer[] = [
       'Collaborate with development teams for continuous delivery',
     ],
     applyUrl: 'https://www.revolut.com/careers/devops-engineer',
+    email: 'hiring@revolut.com',
     postedDate: '2025-10-16',
   },
   {
@@ -125,6 +130,7 @@ export const careers: ICareer[] = [
       'Ensure code reliability through testing and CI/CD',
     ],
     applyUrl: 'https://www.adyen.com/careers/backend-python-developer',
+    email: 'techjobs@adyen.com',
     postedDate: '2025-10-15',
   },
 ];
