@@ -1,38 +1,32 @@
 <div class="career-container">
   <div class="career-content-wrapper">
     <section class="career-hero career-glass">
-      <h1>Get to know our Partner-Companies</h1>
-      <img class="companies-picture" src="img/partner-companies.jpg" />
-    </section>
+      @if (company) {
+      <h1>{{ company.name }}</h1>
+      <img
+        class="companies-picture"
+        [src]="'/img/' + company.logo"
+        [alt]="company.name + ' logo'"
+        class="companies-logo"
+      />
 
-    <section class="companies-grid">
-      @for(companie of companies; track $index){
-      <div class="companies-card career-glass">
-        <div class="companies-header">
-          <img
-            [src]="'/img/' + companie.logo"
-            [alt]="companie.name + ' logo'"
-            class="companies-logo"
-          />
-          <h3>{{ companie.name }}</h3>
-        </div>
-        <ul>
-          <li><b>Industry:</b> {{ companie.industry }}</li>
-          <li><b>Location:</b> {{ companie.location }}</li>
-          <li>
-            <b>Website: </b>
-            <a
-              class="companies-link"
-              [href]="companie.website"
-              target="_blank"
-              rel="noopener noreferrer"
-              >{{ companie.website }}</a
-            >
-          </li>
-        </ul>
-        <p>{{ companie.description }}</p>
-        <button class="career-cta-button">Learn more</button>
-      </div>
+      <ul>
+        <li><b>Industry:</b> {{ company.industry }}</li>
+        <li><b>Location:</b> {{ company.location }}</li>
+        <li>
+          <b>Website: </b>
+          <a
+            class="companies-link"
+            [href]="company.website"
+            target="_blank"
+            rel="noopener noreferrer"
+            >{{ company.website }}</a
+          >
+        </li>
+      </ul>
+
+      <p>{{ company.description }}</p>
+
       }
     </section>
   </div>
