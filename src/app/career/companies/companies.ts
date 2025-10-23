@@ -13,6 +13,7 @@ export class Companies implements OnInit {
   company: ICompanies | undefined;
   constructor(private route: ActivatedRoute) {}
   ngOnInit(): void {
+    window.scrollTo(0, 0);
     let CompanyId = Number(this.route.snapshot.params['id']);
     this.company = companies.find((p) => p.id === CompanyId);
   }
