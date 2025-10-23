@@ -31,8 +31,9 @@
               >
             </li>
           </ul>
-          <p>{{ companie.description }}</p>
-          <button class="career-cta-button">Learn more</button>
+          <button class="career-cta-button" [routerLink]="['/details', companie.id]">
+            Learn more
+          </button>
         </div>
         }
       </section>

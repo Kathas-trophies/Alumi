@@ -1,13 +1,19 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ICompanies } from '../../icompanies.interface';
 import { companies } from '../../companies';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-companies',
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './companies.html',
   styleUrl: './companies.css',
 })
-export class Companies {
-  companies: ICompanies[] = companies;
+export class Companies implements OnInit {
+  company: ICompanies | undefined;
+  constructor(private route: ActivatedRoute) {}
+  ngOnInit(): void {
+    let CompanyId = Number(this.route.snapshot.params['id']);
+    this.company = companies.find((p) => p.id === CompanyId);
+  }
 }
