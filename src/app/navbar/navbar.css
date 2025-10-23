@@ -8,7 +8,7 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.3);
-  position: absolute; /* Geändert von fixed zu absolute, da es im Screenshot nicht scrollt und relativ zum Container ist */
+  position: fixed; /* Geändert von fixed zu absolute, da es im Screenshot nicht scrollt und relativ zum Container ist */
   transform: translate(-50%, 0); /* Nur X-Achse zentrieren */
   left: 50%;
   top: 5%; /* Angepasst, um die Positionierung wie im Bild zu erreichen */
@@ -96,7 +96,7 @@
     padding: 15px 20px;
     justify-content: space-between;
     align-items: center;
-    top: 10%;
+    top: 5%;
     flex-wrap: nowrap;
     width: 79%;
   }
