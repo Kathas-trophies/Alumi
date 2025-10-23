@@ -130,6 +130,11 @@
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
 }
 
+.career-cta-button a {
+  color: white;
+  text-decoration: none;
+}
+
 /* Carreer*/
 
 .career-grid {

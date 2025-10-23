@@ -8,5 +8,6 @@ export interface ICareer {
   requirements: string[];
   responsibilities: string[];
   applyUrl?: string;
+  email: string;
   postedDate: string;
 }
