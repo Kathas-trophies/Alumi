@@ -94,7 +94,10 @@
     align-items: center;
     top: 5%;
     flex-wrap: nowrap;
-    width: 79%;
+
+    margin: 0 auto;
+    width: 500px;
+    max-width: 96%;
   }
   .navbar-collapse {
     width: 100%;
